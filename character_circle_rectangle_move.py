@@ -1,5 +1,7 @@
 
 from pico2d import *
+import math
+
 
 open_canvas()
 
@@ -10,12 +12,14 @@ def run_circle():
     print('Circle')
 
     # 일단 그림을 그리자
-    clear_canvas_now()
-    grass.draw_now(400,30)
-    character.draw_now(400,90)
-    delay(1)
-
-
+    cx, cy, r = 400, 300, 200
+    for degree in range(0,360,1):
+        x = cx + r * math.cos(math.radians(degree))
+        y = cy + r * math.sin(math.radians(degree))
+        clear_canvas_now()
+        grass.draw_now(400,30)
+        character.draw_now(x,y)
+        delay(0.01)
 
     
     pass
