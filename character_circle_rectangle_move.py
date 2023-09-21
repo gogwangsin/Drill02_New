@@ -48,8 +48,8 @@ def run_rectangle():
 while True:
    # run_circle()
     run_rectangle()
-   # run_circle()
-    break
+    run_circle()
+    
 
 
 
