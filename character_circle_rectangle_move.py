@@ -23,15 +23,15 @@ def run_circle():
     # 일단 그림을 그리자
     cx, cy, r = 400, 300, 200
     
-    for degree in range(0,360,1):
-        x = cx + r * math.cos(math.radians(degree))
+    for degree in range(0,360,1): # 0도~360도 
+        x = cx + r * math.cos(math.radians(degree)) # 원의 중점 400, 300 : x는 반지름*cos각도 (여기서 각도를 실수 라디안으로 표현 )
         y = cy + r * math.sin(math.radians(degree))
         render_frame(x,y)
 
 def run_rectangle():
     print('Rectangle')
 
-    for x in range(50,750 + 1,10):
+    for x in range(50,750 + 1,10): # 1 안더하면 750 미만이라 740까지만 됨 ㄴ
         render_frame(x,90)
 
     for y in range(90, 550+1, 10):
